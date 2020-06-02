@@ -2,12 +2,21 @@
 
 This are some small projects that I created while learning Django python web framework.
 
+### to create a project
+`django-admin startproject <my_project>`
+
+### to create an app inseide a project
+`cd my_project`
+`python manage.py startapp <my_app> `
+
+
 ### How to run the projects
 
-`python manage.py firstProject`
+`cd firstProject`
+`python manage.py runserver`
 
-
-`python manage.py templatesDemo`
+`cd templatesDemo`
+`python manage.py runserver`
 
 
 ### How to test theprojects
@@ -22,3 +31,12 @@ templatesDemo
 
 	* http://127.0.0.1:7777/templatesApp
 	* http://127.0.0.1:7777/templatesEmployee
+
+productTemlates
+    * http://127.0.0.1:7777/
+    * http://127.0.0.1:7777/electronics
+    * http://127.0.0.1:7777/toys
+    * http://127.0.0.1:7777/shoes
+    
+modelDemo
+    * http://127.0.0.1:7777/employees/
