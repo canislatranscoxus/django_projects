@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xtreme skaters Registration</title>
+</head>
+<body>
+
+    <h1>User Registration</h1>
+
+    <style type="text/css">
+        body {
+         background: url('{% static "formsApp/images/beach_002.jpg" %}') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+    </style>
+
+    <form method="post" >
+        <table>
+            {{form.as_table}}
+            {% csrf_token %}
+        </table>
+        <br/>
+        <input type="submit" name="" value="Submit">
+    </form>
+
+
+</body>
+</html>
