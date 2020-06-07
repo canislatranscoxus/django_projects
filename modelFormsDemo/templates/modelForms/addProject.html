@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Project</title>
+</head>
+<body>
+    <h1>Add a nice project:</h1>
+    <style type="text/css">
+        body {
+         background: url('{% static "modelForms/images/lego_02.jpg" %}') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+    </style>
+
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" name="" value="Add Project"></input>
+
+
+    </form>
+
+</body>
+</html>

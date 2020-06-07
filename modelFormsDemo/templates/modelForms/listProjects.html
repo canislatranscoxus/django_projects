@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <style type="text/css">
+        body {
+         background: url('{% static "modelForms/images/lego_02.jpg" %}') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+    </style>
+
+
+    {% if projects %}
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Priority</th>
+        </thead>
+        {% for project in projects %}
+        <tr>
+            <td>{{project.name}}</td>
+            <td>{{project.startDate}}</td>
+            <td>{{project.endDate}}</td>
+            <td>{{project.assignedTo}}</td>
+            <td>{{project.priority}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {%else%}
+    <p>No projects Found</p>
+    {%endif%}
+</body>
+</html>

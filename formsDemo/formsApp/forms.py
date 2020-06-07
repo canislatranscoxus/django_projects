@@ -8,7 +8,7 @@ class UserRegistrationForm( forms.Form ):
 
     firstName = forms.CharField(
         widget      = forms.Textarea,
-        validator   = [ validators.MinLengthValidator( 2), validators.MaxLengthValidator( 45 )  ]
+        validators  = [ validators.MinLengthValidator( 2), validators.MaxLengthValidator( 45 )  ]
     )
 
 
@@ -20,7 +20,7 @@ class UserRegistrationForm( forms.Form ):
     gender    = forms.CharField( widget = forms.Select( choices = GENDER ) )
     password  = forms.CharField( widget = forms.PasswordInput )
     ssn       = forms.IntegerField()
-
+    dob       = forms.DateField( widget = forms.SelectDateWidget() )
 
     def clean(self):
         user_cleaned_data = super().clean()
