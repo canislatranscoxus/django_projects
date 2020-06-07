@@ -18,7 +18,8 @@ from django.urls    import path
 from fbvApp         import views
 
 urlpatterns = [
-    path( 'admin/'  , admin.site.urls   ),
-    path( ''        , views.getStudents ),
+    path( 'admin/'  , admin.site.urls       ),
+    path( ''        , views.getStudents     ),
+    path( 'create'  , views.createStudent   ),
 
 ]

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Student Information</title>
 </head>
 <body>
+
+<img src="{% static "fbvApp/images/students.png" %}"> </img>
+
     <h1>Students</h1>
     <table border="2">
         <thead>
@@ -23,6 +27,7 @@
         </tr>
         {%endfor%}
     </table>
-
+    <br/><br/><br/>
+    <a href="/create">Add a student</a>
 </body>
 </html>
