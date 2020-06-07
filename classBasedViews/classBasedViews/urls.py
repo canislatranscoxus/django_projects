@@ -1,4 +1,4 @@
-"""fbvCRUD URL Configuration
+"""classBasedViews URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,15 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls    import path
-from fbvApp         import views
+from django.urls import path
 
 urlpatterns = [
-    path( 'admin/'          , admin.site.urls       ),
-    path( ''                , views.getStudents     ),
-    path( 'create/'         , views.createStudent   ),
-    path( 'delete/<int:id>' , views.deleteStudent   ),
-    path( 'update/<int:id>' , views.updateStudent   ),
-    path( 'update2/<int:id>', views.updateStudent2  ),
-
+    path('admin/', admin.site.urls),
 ]

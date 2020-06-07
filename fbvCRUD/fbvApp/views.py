@@ -21,3 +21,29 @@ def createStudent(request):
 
     return render( request, 'fbvApp/create.html', my_dict )
 
+def deleteStudent( request, id ):
+    student = Student.objects.get( id = id)
+    student.delete()
+    return redirect( '/' )
+
+def updateStudent( request, id ):
+    student = Student.objects.get( id = id)
+    my_dict = { 'student' : student }
+    if request.method == 'POST':
+        form = StudentForm( request.POST, instance = student )
+        if form.is_valid():
+            form.save()
+            return redirect( '/' )
+    return render( request, 'fbvApp/update.html', my_dict )
+
+def updateStudent2( request, id ):
+    student = Student.objects.get( id = id)
+    form = StudentForm( instance = student )
+    my_dict = { 'form' : form }
+    if request.method == 'POST':
+        form = StudentForm( request.POST, instance = student )
+        if form.is_valid():
+            form.save()
+            return redirect( '/' )
+
+    return render( request, 'fbvApp/update2.html', my_dict )

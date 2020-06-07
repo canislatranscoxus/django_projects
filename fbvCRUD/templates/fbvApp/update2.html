@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update2 Student</title>
+</head>
+<body>
+    <img src="{% static "fbvApp/images/campus.png" %}"> </img>
+
+    <h2>Update Student:</h2>
+    <form method="post">
+        {%csrf_token%}
+        <table>
+            {{form.as_table}}
+        </table>
+        <br/>
+        <input type="submit" name="" value="Update">
+
+    </form>
+
+</body>
+</html>
