@@ -1,4 +1,4 @@
-"""classBasedViews URL Configuration
+"""cbvCRUD URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -18,8 +18,11 @@ from django.urls    import path
 from cbvApp         import views
 
 urlpatterns = [
-    path( 'admin/'  , admin.site.urls               ),
-    path( ''        , views.GreetingView.as_view( greetingMessage= '<h1>hello from View Method</h1>' )  ),
-
+    path( 'admin/'          , admin.site.urls                                      ),
+    path( 'students/'       , views.StudentListView.as_view()  , name = 'students' ),
+    path( '<int:pk>/'       , views.StudentDetailView.as_view(), name='detail'     ),
+    path( 'create/'         , views.StudentCreateView.as_view()                    ),
+    path( 'update/<int:pk>' , views.StudentUpdateView.as_view()                    ),
+    path( 'delete/<int:pk>' , views.StudentDeleteView.as_view()                    ),
 
 ]
