@@ -1,4 +1,4 @@
-"""cbvCRUD URL Configuration
+"""cookies URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,15 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls    import path
-from cbvApp         import views
+from cookiesApp     import views
 
 urlpatterns = [
-    path( 'admin/'          , admin.site.urls                                      ),
-    path( ''                , views.StudentListView.as_view()  , name='students'   ),
-    path( 'students/'       , views.StudentListView.as_view()  , name = 'students' ),
-    path( '<int:pk>/'       , views.StudentDetailView.as_view(), name='detail'     ),
-    path( 'create/'         , views.StudentCreateView.as_view()                    ),
-    path( 'update/<int:pk>' , views.StudentUpdateView.as_view()                    ),
-    path( 'delete/<int:pk>' , views.StudentDeleteView.as_view()                    ),
+    path( 'admin/'  , admin.site.urls   ),
+    path( 'home/'   , views.home        ),
+    path( 'page2/'  , views.page2       ),
+    path( 'count/'  , views.countView   ),
 
 ]

@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Student Information</title>
-</head>
-<body>
-    <img src="{% static "cbvApp/images/campus.png" %}"> </img>
+{%extends 'cbvApp/base.html'%}
+{%block body_block%}
+{%load custFilters%}
 
     <h1>Students</h1>
     <table border="2">
@@ -20,13 +15,13 @@
         {% for student in student_list%}
         <tr>
             <td><a href="/{{student.id}}" >{{student.id}}</a></td>
-            <td>{{student.firstName}}</td>
-            <td>{{student.lastName}}</td>
-            <td>{{student.testScore}}</td>
+            <td>{{student.firstName | myAppend:"Miss " }}</td>
+            <td>{{student.lastName  | myUpper         }}  </td>
+            <td>{{student.testScore | add:"100"       }}</td>
         </tr>
         {%endfor%}
     </table>
     <br/><br/><br/>
     <a href="/create">Add a student</a>
-</body>
-</html>
+
+{%endblock%}

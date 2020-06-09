@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Delete Student</title>
-</head>
-<body>
+{%extends 'cbvApp/base.html'%}
+{%block body_block%}
     <h2>Do you want to delete {{student.firstName}} {{student.lastName}}?</h2>
     <form method="post">
         <input type="submit" value="Confirm" >
         <a href="/{{student.id}}" >Cancel</a>
         {%csrf_token%}
     </form>
-
-
-</body>
-</html>
+{%endblock%}
