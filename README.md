@@ -1,6 +1,25 @@
 # my Django Projects
 
-This are some small projects that I created while learning Django python web framework.
+These are some small projects that I created while learning Django python web framework.
+
+---
+
+I recommend the course
+
+Django for Python Developers
+Bharath Thippireddy
+
+Estimated time to complete  : 8h 55m
+Topics                      : Django
+Published by                : Packt Publishing 2019
+Resources                   : https://github.com/PacktPublishing/Django-for-Python-Developers
+Purchase book               : https://www.packtpub.com/business-other/django-for-python-developers-video
+
+---
+
+ch 13. Session Management
+
+---
 
 ### to create a project
 `django-admin startproject <my_project>`
@@ -41,9 +60,6 @@ productTemlates
 modelDemo
     * http://127.0.0.1:7777/employees/
     
----
-
-ch 13. Session Management
-    
+---    
     
     
