@@ -126,3 +126,5 @@ STATICFILES_DIRS  = [
 ]
 static_path = os.path.join( BASE_DIR, 'static' )
 print( '*** static_path: {} \n'.format( static_path ) )
+
+LOGOUT_REDIRECT_URL = '/logout'

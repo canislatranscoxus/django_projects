@@ -17,6 +17,12 @@ def index( request ):
     #del request.session[ 'count' ]
     return render( request, 'sessionApp/index.html' )
 
+
+def test_exception( request ):
+    request.session.set_expiry( 180 ) # 180seconds
+    raise Exception ( 'views.index(), ***  something really bad has heppened....' )
+
+
 def addItem( request ):
     form = ItemForm()
     my_dict = { 'form' : form }

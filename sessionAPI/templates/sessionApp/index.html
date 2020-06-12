@@ -6,12 +6,17 @@
 </head>
 <body>
     <h1>Welcome to Coolmart. (sessionAPI)</h1>
-    <a href="/addItem"      >Add Item</a>
-    <a href="/displayItems" >displayCart</a>
+    <a href="/addItem"          >Add Item      </a><br/>
+    <a href="/displayItems"     >displayCart   </a><br/>
+    <a href="/test_exception"   >test_exception</a><br/>
+
     <br/>
-    <b>Session Expiry Time In Seconds: {{request.session.get_expiry_age}}</b>
     <br/>
-    <b>Session Expiry Date: {{request.session.get_expiry_date}}</b>
+    <hr>
+    <br/>
+
+    <b>Session Expiry Time In Seconds: {{request.session.get_expiry_age}}</b><br/>
+    <b>Session Expiry Date: {{request.session.get_expiry_date}}          </b><br/>
 
 </body>
 </html>

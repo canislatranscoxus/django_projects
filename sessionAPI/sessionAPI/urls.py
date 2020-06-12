@@ -23,6 +23,9 @@ urlpatterns = [
     path( 'count/', views.pageCount ),
 
     path( ''             , views.index       ),
+
+    path( 'test_exception', views.test_exception),
+
     path( 'addItem/'     , views.addItem     ),
     path( 'displayItems/', views.displayCart ),
 
