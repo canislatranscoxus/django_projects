@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient List</title>
+</head>
+<body>
+    <h1>Patients:</h1>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>last  Name</th>
+        </thead>
+
+        {% for patient in patient_list%}
+        <tr>
+            <td>{{ patient.id        }}</td>
+            <td>{{ patient.firstName }}</td>
+            <td>{{ patient.lastName  }}</td>
+            <td>{{ patient.age       }}</td>
+
+            <td><a href="/update/{{patient.id}}" >update</a></td>
+            <td><a href="/delete/{{patient.id}}" >delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    <br/>
+    <a href="create/" >Add Patient</a>
+
+
+</body>
+</html>
