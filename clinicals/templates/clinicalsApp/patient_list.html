@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Patient List</title>
+    <link rel="stylesheet" href="{% static "css/clinicals.css" %}" ></link>
 </head>
 <body>
     <h1>Patients:</h1>
@@ -22,6 +24,8 @@
 
             <td><a href="/update/{{patient.id}}" >update</a></td>
             <td><a href="/delete/{{patient.id}}" >delete</a></td>
+            <td><a href="/addData/{{patient.id}}" >add Data</a></td>
+            <td><a href="/analyze/{{patient.id}}" >analyze Data</a></td>
         </tr>
         {%endfor%}
     </table>

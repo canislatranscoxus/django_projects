@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinical Data Report</title>
+    <link rel="stylesheet" href="{% static "css/clinicals.css" %}" ></link>
+</head>
+<body>
+    <h1>Clinical Data Report:</h1>
+    <table border="2">
+        <thead>
+            <td>Component Name</td>
+            <td>Component Value</td>
+            <td>Measure Date Time</td>
+        </thead>
+        {%for eachEntry in data%}
+        <tr>
+            <td>{{eachEntry.componentName}}</td>
+            <td>{{eachEntry.componentValue}}</td>
+            <td>{{eachEntry.measureDateTime}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
