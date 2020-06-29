@@ -20,7 +20,24 @@ from geny   import views
 
 urlpatterns = [
     path( 'admin/'  , admin.site.urls),
-    path( ''        , views.NodeListView.as_view(), name='index'),
-    path('create/'  , views.NodeCreateView.as_view()            ),
+    path( ''                    , views.NodeListView.as_view(), name='index'    ),
+    path('node_create/'         , views.NodeCreateView.as_view()           ),
+
+    # todo: nodes. add child and parent
+    path('node_update/<int:pk>/', views.NodeUpdateView.as_view()    ),
+    path('node_delete/<int:pk>/', views.NodeDeleteView.as_view()    ),
+
+    #todo: edges
+    path('edge_list'            , views.NodeListView.as_view()      ),
+    path('edge_create/'         , views.NodeCreateView.as_view()    ),
+    path('edge_update/<int:pk>/', views.NodeUpdateView.as_view()    ),
+    path('edge_delete/<int:pk>/', views.NodeDeleteView.as_view()    ),
+
+    #todo: draw graph.
+
+    #todo: interact on graph. add child, add parent. connect child, connect parent, delete edge.for
+
+    # todo: givcss give style.
+
 
 ]

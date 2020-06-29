@@ -23,3 +23,22 @@ class NodeUpdateView( UpdateView ):
 class NodeDeleteView( DeleteView ):
     model       = Node
     success_url = reverse_lazy( 'index' )
+
+# -----------------------------------------------------------------------------
+
+class EdgeListView( ListView ):
+    model = Edge
+
+class EdgeCreateView( CreateView ):
+    model       = Edge
+    success_url = reverse_lazy( 'index' )
+    fields      = ( 'name', 'type' )
+
+class EdgeUpdateView( UpdateView ):
+    model       = Edge
+    success_url = reverse_lazy( 'index' )
+    fields      = ( 'name', 'type' )
+
+class EdgeDeleteView( DeleteView ):
+    model       = Edge
+    success_url = reverse_lazy( 'index' )

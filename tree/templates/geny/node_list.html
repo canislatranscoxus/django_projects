@@ -19,18 +19,27 @@
         <tr>
             <td>{{ node.id}}</td>
             <td>{{ node.name}}</td>
-            <td>{{ node.type}}</td>
 
-            <td><a href="/update/{{node.id}}"    >update         </a></td>
-            <td><a href="/delete/{{node.id}}"    >delete         </a></td>
-            <td><a href="/addParent/{{node.id}}" >add Parent Node</a></td>
-            <td><a href="/addChild/{{node.id}}"  >add Child  Node</a></td>
+            {% if node.type == 'b' %}
+            <td>boy</td>
+            {% elif node.type == 'g' %}
+            <td>girl</td>
+            {% elif node.type == 'f' %}
+            <td>family</td>
+            {%endif%}
+
+
+            <td><a href="/node_update/{{node.id}}"    >update         </a></td>
+            <td><a href="/node_delete/{{node.id}}"    >delete         </a></td>
+            <td><a href="/node_add_parent/{{node.id}}" >add Parent Node</a></td>
+            <td><a href="/node_add_child/{{node.id}}"  >add Child  Node</a></td>
 
         </tr>
         {%endfor%}
     </table>
     <br/>
-    <a href="create/" >Add Node</a><br/>
+    <a href="node_create/" >Add Node</a><br/>
+    <a href="edge_list/" >Add Node</a><br/>
 
     <a href="drawTree/" >Draw Genealogy Tree Graph</a>
 

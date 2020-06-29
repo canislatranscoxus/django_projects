@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Confirm Delete</title>
+</head>
+<body>
+    <h2>Delete Node {{node.name}} ?</h2>
+    <form method="post">
+
+
+
+        <input type="submit" value="Confirm" >
+        <a href="/">Cancel</a>
+        {%csrf_token%}
+    </form>
+
+</body>
+</html>
