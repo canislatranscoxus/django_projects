@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node list</title>
+</head>
+<body>
+
+    <h1>Nodes:</h1>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>type</th>
+        </thead>
+
+        {% for node in node_list%}
+        <tr>
+            <td>{{ node.id}}</td>
+            <td>{{ node.name}}</td>
+            <td>{{ node.type}}</td>
+
+            <td><a href="/update/{{node.id}}"    >update         </a></td>
+            <td><a href="/delete/{{node.id}}"    >delete         </a></td>
+            <td><a href="/addParent/{{node.id}}" >add Parent Node</a></td>
+            <td><a href="/addChild/{{node.id}}"  >add Child  Node</a></td>
+
+        </tr>
+        {%endfor%}
+    </table>
+    <br/>
+    <a href="create/" >Add Node</a><br/>
+
+    <a href="drawTree/" >Draw Genealogy Tree Graph</a>
+
+</body>
+</html>

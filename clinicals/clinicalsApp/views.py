@@ -28,6 +28,7 @@ class PatientDeleteView( DeleteView ):
     model       = Patient
     success_url = reverse_lazy( 'index' )
 
+#  --------------------------------------------------------------------------------
 
 def addData( request, **kwargs ):
     form    = ClinicalDataForm()
