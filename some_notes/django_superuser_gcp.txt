@@ -1,0 +1,7 @@
+
+How to create superuser in django through gcp?
+
+https://stackoverflow.com/questions/66843922/how-to-create-superuser-in-django-through-gcp
+
+https://cloud.google.com/python/django/appengine
+
