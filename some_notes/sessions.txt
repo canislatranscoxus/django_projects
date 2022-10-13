@@ -1,0 +1,6 @@
+How to store django objects as session variables ( object is not JSON serializable)?
+
+
+DjangoJSONEncoder
+
+https://stackoverflow.com/questions/22294788/how-to-store-django-objects-as-session-variables-object-is-not-json-serializab

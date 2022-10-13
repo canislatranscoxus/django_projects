@@ -5,3 +5,18 @@ https://stackoverflow.com/questions/66843922/how-to-create-superuser-in-django-t
 
 https://cloud.google.com/python/django/appengine
 
+the idea is
+
+goto GCP
+
+open a Cloud Shell terminal
+
+clone my code from github 
+
+prepare virtual environment
+
+download Cloud SQL Auth proxy
+
+we already have a mySQL server, database, user
+
+

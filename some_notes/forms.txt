@@ -1,0 +1,83 @@
+Django Forms
+
+
+we can have 2 class of forms in django
+
+Simple Forms
+
+Model Forms
+
+
+we can display in 3 ways
+
+* as parragraph
+* as table
+* manually
+
+https://docs.djangoproject.com/en/4.0/topics/forms/#working-with-form-templates
+------------------------------------------------------------------
+Examples:
+
+Display as parragraph
+
+      <form action='{% url "ship:update_ship" %}' method="post" class="order-form" >
+        
+        {{ ship_form.as_p }}
+        
+        <p><input type="submit" value='✈️🚁🚚 {% trans "update" %}' ></p>
+        {% csrf_token %}
+      </form>
+      
+      
+      
+------------------------------------------------------------------
+Display as table
+
+ <form method="post" >
+        <table>
+            {{form.as_table}}
+            {% csrf_token %}
+        </table>
+        <br/>
+        <input type="submit" name="" value="Submit">
+    </form>
+
+https://github.com/canislatranscoxus/django_projects/blob/master/formsDemo/templates/formsDemo/userRegistration.html
+
+------------------------------------------------------------------
+
+Display form fields Manually 
+https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually
+
+/home/art/git/cbd/basmati/reports/templates/reports/
+
+	client_messages.html
+	orders.html
+
+  <form method="get" class="RepClientMesaggeForm" >
+
+    <div class="row">
+      <div class="fieldWrapper">
+        {{ form.start_date.errors }}
+        <label for="{{ form.start_date.id_for_label }}"> {% trans "start date" %} </label>
+        <br>{{ form.start_date }}
+      </div>    
+      
+      <div class="fieldWrapper">
+        {{ form.end_date.errors }}
+        <label for="{{ form.end_date.id_for_label }}"> {% trans "end date" %} </label>
+        <br>{{ form.end_date }}
+      </div>
+
+      <div class="fieldWrapper">
+        {{ form.order_by.errors }}
+        <label for="{{ form.order_by.id_for_label }}"> {% trans "order by" %} </label>
+        <br>{{ form.order_by }}
+      </div>
+    </div>
+
+    <p><input type="submit" value="{% trans "OK" %}"></p>
+      {% csrf_token %}
+  </form>
+
+

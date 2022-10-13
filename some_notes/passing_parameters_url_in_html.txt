@@ -1,0 +1,14 @@
+<!--source:  my_addresses.html
+ -->
+
+
+
+
+    <p>
+      <a href='{% url "address:edit" address.id %}'   >{% trans "Edit" %}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <a href='{% url "address:delete" address.id %}' >{% trans "Delete" %}</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <a href='{% url "address:setdefault" address.id %}' > 
+        {% trans "Make this my default address" %}
+      </a>&nbsp;&nbsp;&nbsp;
+    </p>
+

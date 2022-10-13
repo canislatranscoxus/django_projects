@@ -1,0 +1,24 @@
+How to know which language are we using rigth now?
+
+Answer 1.
+django.utils.translation.get_language() 
+
+Answer 2.
+request.LANGUAGE_CODE
+
+Answer 3.
+
+
+Answer 4.
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/3356964/how-can-i-get-the-current-language-in-django
+
+
+
+

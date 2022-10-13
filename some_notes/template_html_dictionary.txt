@@ -1,0 +1,4 @@
+How to pass and access a dictionary in a html template in django
+
+
+
