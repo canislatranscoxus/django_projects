@@ -11,17 +11,16 @@
 sudo apt-get install python3-venv
 #sudo apt-get install python3.10-venv
 
-python3 -m venv env
-source env/bin/activate
+python3 -m venv env_01
+source env_01/bin/activate
 
 pip3 install --upgrade pip
 python3 -m pip install --upgrade setuptools
 pip3 install --no-cache-dir  --force-reinstall -Iv grpcio==1.35.0 
 
 # get code from git
-git clone git@github.com:canislatranscoxus/cbd.git
-
-cd ~/git/django_projects
+git clone git@github.com:canislatranscoxus/django_projects.git
+cd ~/git/django_projects/firstProject/
 git pull
 git pull --ff-only
 
