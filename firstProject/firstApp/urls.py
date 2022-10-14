@@ -18,6 +18,7 @@ from firstApp       import views
 
 
 urlpatterns = [
+    path( ''         , views.display         ),
     path( 'hello/'   , views.display         ),
     path( 'datetime/', views.displayDateTime )
 

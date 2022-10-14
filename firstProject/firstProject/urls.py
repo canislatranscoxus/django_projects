@@ -19,7 +19,8 @@ from django.conf.urls   import include
 
 urlpatterns = [
     path( 'admin/'      , admin.site.urls       ),
-    path( 'firstApp/'   , include( 'firstApp.urls' ) ),
+    path( ''            , include( 'firstApp.urls' ) ),
+    #path( 'firstApp/'   , include( 'firstApp.urls' ) ),
     path( 'quoteApp/'   , include( 'quoteApp.urls' ) )
 
 ]
