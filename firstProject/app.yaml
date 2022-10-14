@@ -1,4 +1,4 @@
-service: my-second-app
+service: sameday
 
 # [START django_app]
 runtime: python39
