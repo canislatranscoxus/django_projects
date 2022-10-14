@@ -12,7 +12,7 @@ sudo apt-get install python3-venv
 #sudo apt-get install python3.10-venv
 
 python3 -m venv env_01
-source env_01/bin/activate
+source ~/git/env_01/bin/activate
 
 pip3 install --upgrade pip
 python3 -m pip install --upgrade setuptools
